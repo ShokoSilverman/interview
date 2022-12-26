@@ -24,5 +24,6 @@ full_rows: pd.DataFrame = combined_df.dropna(how='any', axis=0)
 #no idea how to decide how to choose which is correct, in the future would try to use creation date to decide which is the most up to date version of entry
 full_rows.drop_duplicates(subset='email', inplace=True)
 pdb.runeval('print(full_rows.head())')
+#sorting alphabetically on the email field
 full_rows.sort_values(by='email', inplace=True)
 pdb.runeval('print(full_rows.head())')
